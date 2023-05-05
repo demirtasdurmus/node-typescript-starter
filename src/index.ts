@@ -3,5 +3,3 @@ process.on('uncaughtException', (err: unknown) => {
     console.error('There was an uncaught error', err);
     process.exit(1);
 });
-
-console.log('Hello World!');

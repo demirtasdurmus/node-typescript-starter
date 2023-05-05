@@ -33,10 +33,5 @@
   },
   "dependencies": {
     "rimraf": "^5.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'pre-commit hookdddddddd'"
-    }
   }
 }
