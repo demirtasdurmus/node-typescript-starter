@@ -36,7 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'pre-commit hook'"
+      "pre-commit": "echo 'pre-commit hookdddddddd'"
     }
   }
 }
