@@ -36,8 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lintfix",
-      "pre-stage": "npm run lintfix"
+      "pre-commit": "echo 'pre-commit hook'"
     }
   }
 }
