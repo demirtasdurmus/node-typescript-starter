@@ -4,5 +4,4 @@ process.on('uncaughtException', (err: unknown) => {
     process.exit(1);
 });
 
-// eslint-disable-next-line no-console
 console.log('Hello World!');
