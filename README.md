@@ -1,10 +1,12 @@
--   Enabling nodemon to watch for changes in typescript files and restart the server
+# Notes
+
+- Enabling nodemon to watch for changes in typescript files and restart the server
 
 nodemon --watch "\*.ts" --exec "ts-node" ./src/index.ts
 
--   Example eslint config file
+- Example eslint config file
 
-```
+```javascript
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'plugin:prettier/recommended'],
@@ -28,18 +30,17 @@ module.exports = {
 };
 ```
 
--   Example Scripts for package.json
+- Example Scripts for package.json
 
-```
-	"scripts": {
-		"cleanup": "rimraf dist",
-		"build": "tsc --pretty",
-		"start": "node dist/server.js",
-		"dev": "nodemon -w 'src/**/*.ts' -x ts-node --files -H -T server.ts",
-		"format": "prettier ./src/**/*.{ts,spec.ts,test.ts} --write",
-		"lint": "eslint ./src/**/*.{ts,spec.ts,test.ts} --fix",
-		"lintfix": "npm run format && npm run lint",
-		"test": "jest",
-		"test:watch": "jest --watchAll"
-	},
+```json
+ "scripts": {
+  "cleanup": "rimraf dist",
+  "build": "tsc --pretty",
+  "start": "node dist/server.js",
+  "dev": "nodemon -w 'src/**/*.ts' -x ts-node --files -H -T server.ts",
+  "format": "prettier ./src/**/*.{ts,spec.ts,test.ts} --write",
+  "lint": "eslint ./src/**/*.{ts,spec.ts,test.ts} --fix",
+  "test": "jest",
+  "test:watch": "jest --watchAll"
+ },
 ```
