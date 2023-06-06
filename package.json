@@ -1,37 +1,37 @@
 {
-  "name": "node-typescript-starter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "clean": "rimraf dist",
-    "build": "rimraf dist && tsc --pretty",
-    "start": "node dist/index.js",
-    "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node --files -H -T src/index.ts'",
-    "format": "prettier ./src/**/*.ts --write",
-    "lint": "eslint ./src/**/*.ts --fix",
-    "lintfix": "npm run format && npm run lint",
-    "test": "jest",
-    "test:watch": "jest --watchAll",
-    "prepare": "husky install"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/node": "^18.16.3",
-    "@typescript-eslint/eslint-plugin": "^5.59.2",
-    "@typescript-eslint/parser": "^5.59.2",
-    "eslint": "^8.39.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.3",
-    "nodemon": "^2.0.22",
-    "prettier": "2.8.8",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "rimraf": "^5.0.0"
-  }
+    "name": "node-typescript-starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rimraf dist",
+        "build": "rimraf dist && tsc --pretty",
+        "start": "node dist/index.js",
+        "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node --files -H -T src/index.ts'",
+        "format": "prettier ./src/**/*.ts --write",
+        "lint": "eslint ./src/**/*.ts --fix",
+        "test": "jest",
+        "test:watch": "jest --watchAll",
+        "prepare": "husky install"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^18.16.3",
+        "@typescript-eslint/eslint-plugin": "^5.59.2",
+        "@typescript-eslint/parser": "^5.59.2",
+        "eslint": "^8.39.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.2",
+        "nodemon": "^2.0.22",
+        "prettier": "2.8.8",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "rimraf": "^5.0.0"
+    }
 }
