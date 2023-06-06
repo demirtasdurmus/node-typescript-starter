@@ -1,5 +1,5 @@
 {
-    "cSpell.words": ["parens"],
+    "cSpell.words": ["commitlint", "conventionalcommits", "parens"],
     "eslint.format.enable": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
