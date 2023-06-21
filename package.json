@@ -11,8 +11,6 @@
         "dev": "nodemon --watch 'src/**' --ext 'ts,json' --ignore 'src/**/*.spec.ts' --exec 'ts-node --files -H -T src/index.ts'",
         "format": "prettier ./src/**/*.ts --write",
         "lint": "eslint ./src/**/*.ts --fix",
-        "test": "jest",
-        "test:watch": "jest --watchAll",
         "prepare": "husky install"
     },
     "keywords": [],
