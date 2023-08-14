@@ -1,46 +1,61 @@
-# Notes
+# Node.js TypeScript Starter Project
 
-- Enabling nodemon to watch for changes in typescript files and restart the server
+Welcome to your Node.js TypeScript starter project! This repository is set up with essential tools and configurations to help you kickstart your Node.js application development with TypeScript.
 
-nodemon --watch "\*.ts" --exec "ts-node" ./src/index.ts
+## Features
 
-- Example eslint config file
+- **TypeScript:** Write your code in TypeScript, enabling static typing and improved developer experience.
+- **ESLint:** Lint your code for consistent code style and catch potential issues early.
+- **Prettier:** Keep your codebase consistently formatted using Prettier.
+- **Husky & Lint-Staged:** Enforce code quality by running linting and formatting checks before each commit.
+- **CommitLint:** Enforce conventional commit messages to maintain a clean commit history.
+- **GitHub Actions:** Automate build and lint checks with GitHub Actions workflows.
 
-```javascript
-module.exports = {
-  parser: '@typescript-eslint/parser',
-  extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'plugin:prettier/recommended'],
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-  },
-  env: {
-    es6: true,
-    node: true,
-  },
-  rules: {
-    'no-var': 'error',
-    semi: 'error',
-    indent: ['error', 2, { SwitchCase: 1 }],
-    'no-multi-spaces': 'error',
-    'space-in-parens': 'error',
-    'no-multiple-empty-lines': 'error',
-    'prefer-const': 'error',
-  },
-};
-```
+## Prerequisites
 
-- Example Scripts for package.json
+Before you begin, ensure you have the following installed:
 
-```json
- "scripts": {
-  "cleanup": "rimraf dist",
-  "build": "tsc --pretty",
-  "start": "node dist/server.js",
-  "dev": "nodemon -w 'src/**/*.ts' -x ts-node --files -H -T server.ts",
-  "format": "prettier ./src/**/*.{ts,spec.ts,test.ts} --write",
-  "lint": "eslint ./src/**/*.{ts,spec.ts,test.ts} --fix",
-  "test": "jest",
-  "test:watch": "jest --watchAll"
- },
-```
+- Node.js: [Download](https://nodejs.org/)
+- npm: Included with Node.js installation
+- TypeScript: Installed as a dev dependency
+
+## Getting Started
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/node-typescript-starter.git
+   cd node-typescript-starter
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+    npm run dev
+    ```
+
+## Scripts
+
+- `npm run build`: Clean the `dist` directory and transpile TypeScript code..
+- `npm start`: Run the transpiled code from the `dist` directory.
+- `npm run dev`: Start the development server with hot-reloading using nodemon.
+- `npm run format`: Format your code using Prettier.
+- `npm run lint`: Lint your code using ESLint.
+- `npm run commit`: Use the interactive Commitlint commit tool with conventional commit messages.
+
+## Continuous Integration
+
+This project includes GitHub Actions workflows to automatically build and test your code on each push. You can find the workflow configuration in the .github/workflows directory.
+
+## License
+
+This project is licensed under the ISC License. See the LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
