@@ -6,11 +6,12 @@
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "project": "./tsconfig.json",
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "extends": [
-        "eslint:recommended", // ESLint's inbuilt "recommended" config - it turns on a small, sensible set of rules which lint for well-known best-practices.
+        "plugin:@typescript-eslint/eslint-recommended", // ESLint's inbuilt "recommended" config - it turns on a small, sensible set of rules which lint for well-known best-practices.
         "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin.  it's similar to eslint:recommended, except it turns on TypeScript-specific rules from our plugin.
         "prettier" // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
     ],
@@ -31,7 +32,6 @@
         "no-underscore-dangle": "off",
         "class-methods-use-this": "off",
         "prefer-destructuring": ["error", { "object": true, "array": false }]
-        // "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
     },
     "overrides": []
 }
