@@ -1,0 +1,9 @@
+{
+    "restartable": "rs",
+    "ignore": ["src/**/*.test.ts"],
+    "watch": ["src/"],
+    "execMap": {
+        "ts": "ts-node"
+    },
+    "ext": "ts,json"
+}
