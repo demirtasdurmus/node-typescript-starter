@@ -1,0 +1,55 @@
+{
+  "name": "node-typescript-starter",
+  "version": "1.0.0",
+  "description": "Node Typescript Starter Boilerplate",
+  "keywords": [
+    "node",
+    "typescript",
+    "starter",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "dev:tsc": "tsc --watch --preserveWatchOutput -p tsconfig.build.json",
+    "dev:node": "node --enable-source-maps --watch dist/index.js",
+    "dev": "npm run dev:tsc & npm run dev:node",
+    "build": "tsc --pretty -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint --fix .",
+    "format:write": "prettier --write \"**/*.ts\" --cache",
+    "format:check": "prettier --check \"**/*.ts\" --cache",
+    "clean": "bash scripts/clean.sh",
+    "commit": "commit",
+    "prepare": "husky",
+    "postinstall": "npm run build"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/prompt-cli": "^14.1.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^18.16.3",
+    "@types/supertest": "^6.0.3",
+    "eslint": "^9.35.0",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "jest": "^30.1.3",
+    "jiti": "^2.5.1",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-sort-imports": "^1.8.8",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.1",
+    "tsc-files": "^1.1.4",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.43.0"
+  }
+}

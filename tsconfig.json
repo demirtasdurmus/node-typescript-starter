@@ -1,0 +1,27 @@
+{
+  /* @see https://www.totaltypescript.com/typescript-and-node */
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* If transpiling with TypeScript: */
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    /* Along with --enable-source-maps while running node, error stack traces will point to your TypeScript files instead of your JavaScript files.*/
+    "sourceMap": true,
+
+    /* If your code doesn't require access to DOM API's */
+    "lib": ["es2022"]
+  },
+  "exclude": ["dist", "node_modules", "coverage", "scripts"]
+}

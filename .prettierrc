@@ -1,0 +1,14 @@
+{
+  "singleQuote": true,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "bracketSpacing": true,
+  "trailingComma": "all",
+  "endOfLine": "auto",
+  "plugins": ["prettier-plugin-sort-imports"],
+  "sortingMethod": "alphabetical",
+  "sortingOrder": "ascending",
+  "importTypeOrder": ["NPMPackages", "localImports"]
+}

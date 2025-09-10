@@ -1,0 +1,65 @@
+name: Linting, Testing, Building
+
+on:
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+
+env:
+  PORT: 3000
+  NODE_VERSION: 22.x
+
+jobs:
+  Linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v5
+
+      - name: Use Node.js ${NODE_VERSION}
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${NODE_VERSION}
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+
+      - name: Run Linting Rules
+        run: npm run lint
+
+  Testing:
+    needs: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v5
+
+      - name: Use Node.js ${NODE_VERSION}
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${NODE_VERSION}
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+
+      - name: Run Unit Tests
+        run: npm run test
+
+  Building:
+    needs: Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v5
+
+      - name: Use Node.js ${NODE_VERSION}
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${NODE_VERSION}
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+
+      - name: Build
+        run: npm run build
