@@ -8,7 +8,7 @@ on:
 
 env:
   PORT: 3000
-  NODE_VERSION: 22.x
+  NODE_VERSION: 22
 
 jobs:
   Linting:
@@ -17,10 +17,10 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v5
 
-      - name: Use Node.js ${NODE_VERSION}
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v5
         with:
-          node-version: ${NODE_VERSION}
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
@@ -35,10 +35,10 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v5
 
-      - name: Use Node.js ${NODE_VERSION}
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v5
         with:
-          node-version: ${NODE_VERSION}
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
@@ -53,10 +53,10 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v5
 
-      - name: Use Node.js ${NODE_VERSION}
+      - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v5
         with:
-          node-version: ${NODE_VERSION}
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps

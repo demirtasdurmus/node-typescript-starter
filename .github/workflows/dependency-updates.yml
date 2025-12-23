@@ -1,0 +1,61 @@
+name: Dependency Updates
+
+on:
+  schedule:
+    # Run at the end of every month (28th-31st at 9 AM UTC)
+    # This covers all months regardless of length
+    - cron: "0 9 28-31 * *"
+  workflow_dispatch: # Allow manual triggering
+
+env:
+  NODE_VERSION: 22
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.ACTIONS_PAT_GITHUB }}
+          fetch-depth: 0
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Update dependencies
+        run: |
+          npx npm-check-updates
+          npm install
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.ACTIONS_PAT_GITHUB }}
+          commit-message: "chore: update dependencies (minor versions only)"
+          title: "chore: dependency updates (minor versions)"
+          body: |
+            ## Dependency Updates
+
+            This PR updates dependencies to their latest minor versions.
+
+            **Note:** Only minor and patch version updates are included. Major version updates are excluded.
+
+            ### Configuration
+            - Updated using `npm-check-updates`
+            - Config file: `.ncurc.json`
+            - Target: minor versions only
+
+            ### How to review
+            1. Review the updated packages in the diff
+            2. Run tests locally: `npm test`
+            3. Test the application: `npm run dev`
+
+            ---
+            *This PR was automatically created by the Dependency Updates workflow*
