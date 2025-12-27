@@ -1,5 +1,5 @@
-import type { Config } from 'jest';
 import { createDefaultPreset } from 'ts-jest';
+import type { Config } from 'jest';
 
 /**
  * @see https://kulshekhar.github.io/ts-jest/docs/getting-started/options
