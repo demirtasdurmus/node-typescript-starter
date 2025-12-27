@@ -1,16 +1,43 @@
 name: 'Get & Cache Dependencies'
-description: 'Get & Cache Dependencies(via npm) for faster builds'
+description: 'Get & Cache Dependencies (via pnpm) for faster builds'
+inputs:
+  cache-key-prefix:
+    description: 'Prefix for cache key (default: deps-node-modules)'
+    required: false
+    default: 'deps-node-modules'
+  fail-on-cache-miss:
+    description: 'Fail the job if cache is not found'
+    required: false
+    default: 'false'
+  enable-cross-os-archive:
+    description: 'Enable cross-OS caching (allows sharing cache across different OS)'
+    required: false
+    default: 'false'
+
 runs:
   using: 'composite'
   steps:
-    - name: 'Cache Dependencies'
-      uses: 'actions/cache@v3'
+    - name: 'Restore Dependencies Cache'
+      uses: 'actions/cache/restore@v4'
       id: cache-node-modules
       with:
-        path: 'node_modules'
-        key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+        path: node_modules
+        key: ${{ inputs.cache-key-prefix }}-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ inputs.cache-key-prefix }}-${{ runner.os }}-
+          ${{ inputs.cache-key-prefix }}-
+        fail-on-cache-miss: ${{ inputs.fail-on-cache-miss }}
+        enableCrossOsArchive: ${{ inputs.enable-cross-os-archive }}
 
-    - name: Install Dependencies
+    - name: 'Install Dependencies'
       if: steps.cache-node-modules.outputs.cache-hit != 'true'
-      run: npm ci
+      run: pnpm install --frozen-lockfile
       shell: bash
+
+    - name: 'Save Dependencies Cache'
+      if: steps.cache-node-modules.outputs.cache-hit != 'true'
+      uses: 'actions/cache/save@v4'
+      with:
+        path: node_modules
+        key: ${{ inputs.cache-key-prefix }}-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        enableCrossOsArchive: ${{ inputs.enable-cross-os-archive }}
