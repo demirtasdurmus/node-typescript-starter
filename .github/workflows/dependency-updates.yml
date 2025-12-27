@@ -29,10 +29,13 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Update dependencies
         run: |
-          npx npm-check-updates
-          npm install
+          pnpx npm-check-updates
+          pnpm install
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7

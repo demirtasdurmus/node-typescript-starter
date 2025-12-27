@@ -16,7 +16,7 @@
   "scripts": {
     "dev:tsc": "tsc --watch --preserveWatchOutput -p tsconfig.build.json",
     "dev:node": "node --enable-source-maps --watch dist/index.js",
-    "dev": "npm run dev:tsc & npm run dev:node",
+    "dev": "pnpm run dev:tsc & pnpm run dev:node",
     "build": "tsc --pretty -p tsconfig.build.json",
     "start": "node dist/index.js",
     "test": "jest",
@@ -29,7 +29,7 @@
     "clean": "bash scripts/clean.sh",
     "commit": "commit",
     "prepare": "husky",
-    "postinstall": "npm run build"
+    "postinstall": "pnpm build"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",

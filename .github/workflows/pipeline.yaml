@@ -7,7 +7,6 @@ on:
   workflow_dispatch:
 
 env:
-  PORT: 3000
   NODE_VERSION: 22
 
 jobs:
@@ -22,11 +21,14 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
 
       - name: Run Linting Rules
-        run: npm run lint
+        run: pnpm lint
 
   Testing:
     needs: Linting
@@ -40,11 +42,14 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
 
       - name: Run Unit Tests
-        run: npm run test
+        run: pnpm test
 
   Building:
     needs: Testing
@@ -58,8 +63,11 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
 
       - name: Build
-        run: npm run build
+        run: pnpm build

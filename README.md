@@ -14,7 +14,7 @@ A modern, production-ready Node.js starter template with TypeScript, comprehensi
 
 ## 📁 Project Structure
 
-```
+```sh
 src/
 ├── index.ts        # Main entry point
 └── index.test.ts   # Unit tests
@@ -29,7 +29,7 @@ scripts/            # Build and utility scripts
 ### Prerequisites
 
 - Node.js (v22 or higher)
-- npm
+- pnpm
 
 ### Installation
 
@@ -39,30 +39,30 @@ git clone <your-repo-url>
 cd node-ts-starter
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start the development server
-npm run dev
+pnpm dev
 ```
 
 ## 📜 Available Scripts
 
-| Script                  | Description                        |
-| ----------------------- | ---------------------------------- |
-| `npm run dev`           | Start development with hot reload  |
-| `npm run dev:tsc`       | TypeScript compiler in watch mode  |
-| `npm run dev:node`      | Node.js in watch mode              |
-| `npm run build`         | Build TypeScript to JavaScript     |
-| `npm start`             | Start production build             |
-| `npm test`              | Run unit tests                     |
-| `npm run test:watch`    | Run tests in watch mode            |
-| `npm run test:coverage` | Run tests with coverage report     |
-| `npm run type-check`    | Type check without emitting files  |
-| `npm run lint`          | Lint and fix code                  |
-| `npm run format:write`  | Format code with Prettier          |
-| `npm run format:check`  | Check code formatting              |
-| `npm run clean`         | Clean build artifacts              |
-| `npm run commit`        | Interactive commit with commitlint |
+| Script               | Description                        |
+| -------------------- | ---------------------------------- |
+| `pnpm dev`           | Start development with hot reload  |
+| `pnpm dev:tsc`       | TypeScript compiler in watch mode  |
+| `pnpm dev:node`      | Node.js in watch mode              |
+| `pnpm build`         | Build TypeScript to JavaScript     |
+| `pnpm start`         | Start production build             |
+| `pnpm test`          | Run unit tests                     |
+| `pnpm test:watch`    | Run tests in watch mode            |
+| `pnpm test:coverage` | Run tests with coverage report     |
+| `pnpm type-check`    | Type check without emitting files  |
+| `pnpm lint`          | Lint and fix code                  |
+| `pnpm format:write`  | Format code with Prettier          |
+| `pnpm format:check`  | Check code formatting              |
+| `pnpm clean`         | Clean build artifacts              |
+| `pnpm commit`        | Interactive commit with commitlint |
 
 ## 🧪 Testing
 
@@ -74,21 +74,21 @@ The project includes comprehensive testing setup:
 
 ```bash
 # Run all tests
-npm test
+pnpm test
 
 # Run tests in watch mode
-npm run test:watch
+pnpm test:watch
 
 # Generate coverage report
-npm run test:coverage
+pnpm test:coverage
 ```
 
 ## 🏗️ Development
 
 ### Development Workflow
 
-1. **Hot Reload**: Use `npm run dev` for automatic TypeScript compilation and Node.js restart
-2. **Type Checking**: Run `npm run type-check` to verify TypeScript without building
+1. **Hot Reload**: Use `pnpm dev` for automatic TypeScript compilation and Node.js restart
+2. **Type Checking**: Run `pnpm type-check` to verify TypeScript without building
 3. **Code Quality**: Pre-commit hooks automatically lint and format your code
 4. **Testing**: Write tests in `*.test.ts` files alongside your source code
 
@@ -124,8 +124,8 @@ The starter includes a sample function `sumTotal` in `src/index.ts` with its cor
 
 ## 🚀 Deployment
 
-1. Build the project: `npm run build`
-2. Start the application: `npm start`
+1. Build the project: `pnpm build`
+2. Start the application: `pnpm start`
 3. The compiled JavaScript will be available in the `dist/` directory
 
 ## 📄 License
