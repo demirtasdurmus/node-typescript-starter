@@ -23,5 +23,5 @@
     /* If your code doesn't require access to DOM API's */
     "lib": ["es2022"]
   },
-  "exclude": ["dist", "node_modules", "coverage", "scripts"]
+  "exclude": ["dist", "node_modules", "coverage", "scripts", ".ncurc.js"]
 }

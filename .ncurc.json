@@ -1,7 +1,0 @@
-{
-  "target": "minor",
-  "upgrade": true,
-  "reject": [],
-  "packageFile": "package.json",
-  "packageManager": "npm"
-}
