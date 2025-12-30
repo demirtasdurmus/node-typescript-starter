@@ -33,6 +33,8 @@ jobs:
         run: corepack enable
 
       - name: Update dependencies
+        env:
+          CI: false # Prevent npm-check-updates from running with --frozen-lockfile
         run: |
           pnpx npm-check-updates
           pnpm install
@@ -44,21 +46,35 @@ jobs:
           commit-message: "chore: update dependencies (minor versions only)"
           title: "chore: dependency updates (minor versions)"
           body: |
-            ## Dependency Updates
+            ## 🗒️ Description
 
-            This PR updates dependencies to their latest minor versions.
+            This PR automatically updates dependencies to their latest minor and patch versions.
 
             **Note:** Only minor and patch version updates are included. Major version updates are excluded.
 
             ### Configuration
             - Updated using `npm-check-updates`
-            - Config file: `.ncurc.json`
-            - Target: minor versions only
+            - Config file: `.ncurc.js`
+            - Target: minor and patch versions only
 
-            ### How to review
+            ## ℹ️ Related Issue
+
+            N/A - Automated dependency update
+
+            ## ✅ Checklist
+
+            - [ ] I have tested the changes locally and they work as expected.
+            - [ ] My code follows the project's coding conventions and style guidelines.
+            - [ ] I have ensured that there are no linting or formatting errors.
+            - [ ] All existing tests pass and I have added new tests where necessary.
+            - [ ] I have updated the documentation if applicable.
+
+            ## 🧪 How to Test
+
             1. Review the updated packages in the diff
-            2. Run tests locally: `npm test`
-            3. Test the application: `npm run dev`
+            2. Run tests locally: `pnpm test`
+            3. Test the application: `pnpm dev`
+            4. Verify that all dependencies are compatible and working correctly
 
             ---
             *This PR was automatically created by the Dependency Updates workflow*
