@@ -3,5 +3,4 @@
 dist
 coverage
 node_modules
-package-lock.json
-*.yml
+pnpm-lock.yaml

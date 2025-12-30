@@ -1,6 +1,5 @@
+.DS_Store
+
 node_modules
 dist
-.DS_Store
 coverage
-coverage-int
-.harper-dictionary.txt
