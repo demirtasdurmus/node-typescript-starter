@@ -1,3 +1,4 @@
 {
-  "*.ts": ["tsc-files --pretty --noEmit", "prettier --write", "eslint --fix"]
+  "*.{js,mjs,cjs,ts,mts,cts,json,yml,yaml,md}": ["prettier --write", "eslint --fix"],
+  "*.{ts,mts,cts}": ["tsc-files --pretty --noEmit"]
 }

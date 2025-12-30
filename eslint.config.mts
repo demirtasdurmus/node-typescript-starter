@@ -1,5 +1,5 @@
-import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import globals from 'globals';
 import { defineConfig } from 'eslint/config';
 
 /**
@@ -25,6 +25,6 @@ export default defineConfig([
     },
   },
   {
-    ignores: ['node_modules/*', 'dist/*', 'package-lock.json', 'coverage/*', 'coverage-int/*'],
+    ignores: ['node_modules/*', 'dist/*', 'pnpm-lock.yaml', 'coverage/*'],
   },
 ]);
