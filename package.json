@@ -32,11 +32,11 @@
     "postinstall": "pnpm build"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.2.0",
-    "@commitlint/config-conventional": "^20.2.0",
-    "@commitlint/prompt-cli": "^20.2.0",
+    "@commitlint/cli": "^20.4.0",
+    "@commitlint/config-conventional": "^20.4.0",
+    "@commitlint/prompt-cli": "^20.4.0",
     "@types/jest": "^30.0.0",
-    "@types/node": "^22.19.3",
+    "@types/node": "^22.19.7",
     "@types/supertest": "^6.0.3",
     "eslint": "^9.39.2",
     "globals": "^16.5.0",
@@ -44,13 +44,13 @@
     "jest": "^30.2.0",
     "jiti": "^2.6.1",
     "lint-staged": "^16.2.7",
-    "npm-check-updates": "^19.2.0",
-    "prettier": "^3.7.4",
+    "npm-check-updates": "^19.3.2",
+    "prettier": "^3.8.1",
     "prettier-plugin-sort-imports": "^1.8.9",
-    "supertest": "^7.1.4",
+    "supertest": "^7.2.2",
     "ts-jest": "^29.4.6",
     "tsc-files": "^1.1.4",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.51.0"
+    "typescript-eslint": "^8.54.0"
   }
 }
