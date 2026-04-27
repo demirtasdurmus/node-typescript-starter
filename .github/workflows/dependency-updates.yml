@@ -4,7 +4,7 @@ on:
   schedule:
     # Run at the end of every month (28th-31st at 9 AM UTC)
     # This covers all months regardless of length
-    - cron: "0 9 28-31 * *"
+    - cron: '0 9 28-31 * *'
   workflow_dispatch: # Allow manual triggering
 
 env:
@@ -43,8 +43,8 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.ACTIONS_PAT_GITHUB }}
-          commit-message: "chore: update dependencies (minor versions only)"
-          title: "chore: dependency updates (minor versions)"
+          commit-message: 'chore: update dependencies (minor versions only)'
+          title: 'chore: dependency updates (minor versions)'
           body: |
             ## 🗒️ Description
 
