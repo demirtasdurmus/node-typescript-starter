@@ -21,7 +21,12 @@
     "sourceMap": true,
 
     /* If your code doesn't require access to DOM API's */
-    "lib": ["es2022"]
+    "lib": ["es2022"],
+
+    "types": ["jest", "node"],
+
+    /* @see https://aka.ms/ts6  */
+    "rootDir": "."
   },
   "exclude": ["dist", "node_modules", "coverage", "scripts", ".ncurc.js"]
 }

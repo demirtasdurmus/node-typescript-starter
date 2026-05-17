@@ -1,4 +1,4 @@
 {
   "*.{js,mjs,cjs,ts,mts,cts,json,yml,yaml,md}": ["prettier --write", "eslint --fix"],
-  "*.{ts,mts,cts}": ["tsc-files --pretty --noEmit"]
+  "*.{ts,mts,cts}": ["bash -c 'pnpm typecheck'"]
 }

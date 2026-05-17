@@ -8,7 +8,7 @@ on:
   workflow_dispatch: # Allow manual triggering
 
 env:
-  NODE_VERSION: 22
+  NODE_VERSION: 24
 
 jobs:
   update-dependencies:
@@ -19,18 +19,19 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.ACTIONS_PAT_GITHUB }}
           fetch-depth: 0
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v5
+
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Enable Corepack
-        run: corepack enable
+          cache: pnpm
 
       - name: Update dependencies
         env:
