@@ -6,7 +6,7 @@ A modern, production-ready Node.js starter template with TypeScript, comprehensi
 
 ### Prerequisites
 
-- Node.js (v24 or higher)
+- Node.js (v22 or higher)
 - pnpm
 
 ### Installation
