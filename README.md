@@ -36,7 +36,7 @@ pnpm dev
 
 1. Build the project: `pnpm build`
 2. Start the application: `pnpm start`
-3. The compiled JavaScript will be available in the `dist/` directory
+3. The compiled JavaScript will be available in the `dist/` or `dist-bundle/`(for esm) directory
 
 ## 📄 License
 

@@ -4,4 +4,5 @@ module.exports = {
   target: 'minor',
   packageManager: 'pnpm',
   packageFile: 'package.json',
+  reject: ['pnpm'],
 };

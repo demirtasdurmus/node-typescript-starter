@@ -25,6 +25,6 @@ export default defineConfig([
     },
   },
   {
-    ignores: ['node_modules/*', 'dist/*', 'pnpm-lock.yaml', 'coverage/*'],
+    ignores: ['node_modules/*', 'dist/*', 'dist-bundle/*', 'pnpm-lock.yaml', 'coverage/*'],
   },
 ]);
