@@ -28,5 +28,5 @@
     /* @see https://aka.ms/ts6  */
     "rootDir": "."
   },
-  "exclude": ["dist", "node_modules", "coverage", "scripts", ".ncurc.js"]
+  "exclude": ["dist", "dist-bundle", "node_modules", "coverage", "scripts", ".ncurc.js"]
 }
