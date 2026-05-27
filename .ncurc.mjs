@@ -1,5 +1,5 @@
 /** @type {import('npm-check-updates').RcOptions } */
-module.exports = {
+export default {
   upgrade: true,
   target: 'minor',
   packageManager: 'pnpm',
