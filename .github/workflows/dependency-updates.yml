@@ -55,7 +55,7 @@ jobs:
 
             ### Configuration
             - Updated using `npm-check-updates`
-            - Config file: `.ncurc.js`
+            - Config file: `.ncurc.mjs`
             - Target: minor and patch versions only
 
             ## ℹ️ Related Issue
