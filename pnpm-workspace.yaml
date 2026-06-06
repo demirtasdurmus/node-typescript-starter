@@ -17,3 +17,5 @@ minimumReleaseAgeExclude:
   - tsdown@0.22.1
   - lint-staged@17.0.7
   - tinyexec@1.2.4
+  - '@types/node@24.13.1'
+  - npm-check-updates@22.2.3
