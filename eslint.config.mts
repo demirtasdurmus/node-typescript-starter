@@ -1,6 +1,6 @@
-import tseslint from 'typescript-eslint';
-import globals from 'globals';
 import { defineConfig } from 'eslint/config';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
 /**
  * @see https://eslint.org/docs/latest/use/getting-started
@@ -22,9 +22,16 @@ export default defineConfig([
           caughtErrorsIgnorePattern: '^_',
         },
       ],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'type-imports',
+          fixStyle: 'separate-type-imports',
+        },
+      ],
     },
   },
   {
-    ignores: ['node_modules/*', 'dist/*', 'dist-bundle/*', 'pnpm-lock.yaml', 'coverage/*'],
+    ignores: ['node_modules/*', 'dist/*', 'pnpm-lock.yaml', 'coverage/*'],
   },
 ]);

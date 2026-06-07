@@ -1,5 +1,5 @@
-import { createDefaultPreset } from 'ts-jest';
 import type { Config } from 'jest';
+import { createDefaultPreset } from 'ts-jest';
 
 /**
  * @see https://kulshekhar.github.io/ts-jest/docs/getting-started/options
@@ -15,6 +15,9 @@ const config: Config = {
   },
   testEnvironment: 'node',
   rootDir: './src',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
   coverageDirectory: '../coverage',
 };
 

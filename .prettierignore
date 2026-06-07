@@ -1,7 +1,6 @@
 # Add files here to ignore them from prettier formatting
 
 dist
-dist-bundle
 coverage
 node_modules
 pnpm-lock.yaml
