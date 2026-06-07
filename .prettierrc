@@ -7,8 +7,7 @@
   "bracketSpacing": true,
   "trailingComma": "all",
   "endOfLine": "auto",
-  "plugins": ["prettier-plugin-sort-imports"],
-  "sortingMethod": "alphabetical",
-  "sortingOrder": "ascending",
-  "importTypeOrder": ["NPMPackages", "localImports"]
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+  "importOrder": ["^(node/(.*)$)|^(node$)", "<THIRD_PARTY_MODULES>", "", "^@/", "", "^[./]"],
+  "importOrderParserPlugins": ["typescript", "decorators-legacy"]
 }

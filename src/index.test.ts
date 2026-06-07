@@ -1,4 +1,4 @@
-import { sumTotal } from '.';
+import { sumTotal } from '@/index';
 
 describe('sumTotal', () => {
   it('should return the sum of two numbers', () => {

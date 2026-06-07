@@ -3,6 +3,5 @@
 node_modules
 dist
 coverage
-dist-bundle
 .eslintcache
 cspell.json
