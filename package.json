@@ -31,14 +31,14 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.2.1",
-    "@commitlint/config-conventional": "^21.2.0",
-    "@commitlint/prompt-cli": "^21.2.0",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@commitlint/prompt-cli": "^21.2.2",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^22.20.1",
-    "eslint": "^10.8.0",
-    "globals": "^17.9.0",
+    "eslint": "^10.8.1",
+    "globals": "^17.11.0",
     "husky": "^9.1.7",
     "jest": "^30.4.2",
     "jiti": "^2.7.0",
@@ -47,6 +47,6 @@
     "ts-jest": "^29.4.12",
     "tsdown": "^0.22.14",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.66.0"
+    "typescript-eslint": "^8.67.0"
   }
 }
