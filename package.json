@@ -2,7 +2,7 @@
   "name": "node-typescript-starter",
   "version": "1.0.0",
   "description": "Node Typescript Starter Boilerplate",
-  "packageManager": "pnpm@11.6.0",
+  "packageManager": "pnpm@11.25.0",
   "keywords": [
     "node",
     "typescript",
