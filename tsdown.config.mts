@@ -5,6 +5,6 @@ export default defineConfig({
   sourcemap: true,
   tsconfig: 'tsconfig.build.json',
   deps: {
-    skipNodeModulesBundle: true,
+    neverBundle: true,
   },
 });
