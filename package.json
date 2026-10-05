@@ -36,17 +36,17 @@
     "@commitlint/prompt-cli": "^21.2.3",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^22.20.4",
+    "@types/node": "^22.20.5",
     "eslint": "^10.11.0",
-    "globals": "^17.12.0",
+    "globals": "^17.13.0",
     "husky": "^9.1.7",
     "jest": "^30.5.2",
     "jiti": "^2.7.0",
-    "lint-staged": "^17.5.1",
+    "lint-staged": "^17.6.0",
     "prettier": "^3.9.9",
-    "ts-jest": "^29.4.13",
+    "ts-jest": "^29.4.14",
     "tsdown": "^0.23.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.70.1"
+    "typescript-eslint": "^8.71.0"
   }
 }
