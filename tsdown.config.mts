@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsdown';
 
 export default defineConfig({
-  target: 'node22',
+  target: 'node24',
   sourcemap: true,
   tsconfig: 'tsconfig.build.json',
   deps: {
