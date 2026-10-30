@@ -6,7 +6,7 @@ A modern, production-ready Node.js starter template with TypeScript, comprehensi
 
 ### Prerequisites
 
-- Node.js (v22 or higher)
+- Node.js (v24 or higher)
 - pnpm
 
 ### Installation
@@ -26,7 +26,7 @@ pnpm dev
 ## 🚀 Features
 
 - **TypeScript** - Full TypeScript support with strict configuration
-- **Node.js** - Modern Node.js with ES2022 features
+- **Node.js** - Modern Node.js (v24) with ES2022 features
 - **Testing** - Jest with unit test configurations and coverage reporting
 - **Code Quality** - ESLint, Prettier, and Husky for code formatting and linting
 - **Development** - Hot reload with TypeScript watch mode and source maps

@@ -1,0 +1,1 @@
+- Before running shell commands, switch to the project's Node version with `nvm use` (version is defined in `.nvmrc`).
