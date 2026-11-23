@@ -37,16 +37,16 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.19.2",
-    "eslint": "^10.14.0",
+    "eslint": "^10.15.0",
     "globals": "^17.14.0",
     "husky": "^9.1.7",
     "jest": "^30.5.2",
     "jiti": "^2.7.0",
-    "lint-staged": "^17.6.0",
+    "lint-staged": "^17.6.1",
     "prettier": "^3.10.1",
     "ts-jest": "^29.4.15",
     "tsdown": "^0.23.7",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.72.2"
+    "typescript-eslint": "^8.73.0"
   }
 }
